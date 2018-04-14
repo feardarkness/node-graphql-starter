@@ -7,9 +7,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Base para proyectos
-
-https://circleci.com/gh/:owner/:repo.png?circle-token=:circle-token
+# Base para proyectos [![Build Status](https://circleci.com/gh/:owner/:repo.png?circle-token=:circle-token)]
 
 ## Tecnologias
 
