@@ -7,7 +7,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Base para proyectos [![Build Status](https://circleci.com/gh/:owner/:repo.png?circle-token=:circle-token)]
+# Base para proyectos [![Build Status](https://circleci.com/gh/feardarkness/node-graphql-starter.png?circle-token=04418a38f418c95ff35334b00a8197dbcb9234e5)]
 
 ## Tecnologias
 
