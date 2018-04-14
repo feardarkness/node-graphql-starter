@@ -2,6 +2,10 @@ const express = require('express');
 
 const app = express();
 
-app.listen();
+app.use('*', (req, res) => {
+  res.json({
+    estado: 'ok',
+  });
+});
 
 module.exports = app;

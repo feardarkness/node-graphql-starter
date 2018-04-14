@@ -1,3 +1,11 @@
+const app = require('./app');
+
+console.log('-> Cargando configuraciones'); // eslint-disable-line
+
+module.exports = {
+  app,
+};
+/* puede usarse despues, es una carga automática de los archivos
 const fs = require('fs');
 const path = require('path');
 
@@ -14,3 +22,4 @@ nombresArchivos.forEach((nombre) => {
 console.log('- Cargando configuraciones'); // eslint-disable-line
 
 module.exports = configuraciones;
+*/
