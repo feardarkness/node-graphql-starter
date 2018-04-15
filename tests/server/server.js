@@ -9,7 +9,7 @@ test('Verificando el servidor de Rest', (t) => {
     .expect('Content-Type', 'application/json; charset=utf-8')
     .end((err, res) => {
       if (err) t.fail(err.message);
-      t.equal(res.body.estado, 'okas', 'El servidor responde correctamente');
+      t.equal(res.body.estado, 'ok', 'El servidor responde correctamente');
     });
 
   t.end();
