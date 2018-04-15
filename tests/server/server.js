@@ -1,6 +1,6 @@
 const test = require('tape');
 const request = require('supertest');
-const app = require('../src/server');
+const app = require('../../src/server');
 
 test('Verificando el servidor de Rest', (t) => {
   request(app)
