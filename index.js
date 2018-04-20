@@ -1,6 +1,14 @@
-const { app } = require('./src/configs');
+const { appConfig } = require('./src/configs');
 const server = require('./src/server');
+const db = require('./src/core/db');
 
-server.listen(app.port, () => {
-  console.log(`.... Escuchando en el puerto ${app.port}`); // eslint-disable-line
-});
+(async () => {
+  // TODO add https://github.com/sindresorhus/ora to show loading icons >_<
+  try {
+    await db();
+    server.listen(appConfig.puerto, () => console.error(`Escuchando en el puerto ${appConfig.puerto}`)); // eslint-disable-line
+  } catch (err) {
+    console.error('Error al iniciar la aplicación', err); // eslint-disable-line
+  }
+})();
+

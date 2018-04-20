@@ -1,9 +1,11 @@
 const app = require('./app');
+const db = require('./db');
 
 console.log('-> Cargando configuraciones'); // eslint-disable-line
 
 module.exports = {
-  app,
+  appConfig: app,
+  dbConfig: db,
 };
 /* puede usarse despues, es una carga automática de los archivos
 const fs = require('fs');
