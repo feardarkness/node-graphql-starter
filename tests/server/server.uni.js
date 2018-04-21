@@ -2,10 +2,10 @@ const test = require('tape');
 const request = require('supertest');
 const app = require('../../src/server');
 
-test('Verificando el servidor de Rest', (t) => {
+test('Verificando la ruta de estado', (t) => {
   request(app)
     .get('/estado')
-    .set('authorization', 'Bearer azx.ser.dfg')
+    .set('authorization', 'a.b.c')
     .expect(200)
     .expect('Content-Type', 'application/json; charset=utf-8')
     .end((err, res) => {

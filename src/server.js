@@ -3,9 +3,12 @@ const logger = require('./core/logger');
 
 const app = express();
 
-logger.info('-> Cargando middlewares globales antes de las rutas'); // eslint-disable-line
+logger.info('-> Cargando middlewares globales antes de las rutas');
 
-logger.info('-> Cargando rutas'); // eslint-disable-line
+
+logger.info('-> Cargando rutas');
+app.use(require('./core/middlewares/request'));
+
 
 app.use('/estado', (req, res) => {
   res.json({
@@ -13,7 +16,8 @@ app.use('/estado', (req, res) => {
   });
 });
 
-logger.info('-> Cargando middlewares globales despues de las rutas'); // eslint-disable-line
+
+logger.info('-> Cargando middlewares globales despues de las rutas');
 // WIP middlewares despues de rutas globales
 
 module.exports = app;
