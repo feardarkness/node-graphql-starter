@@ -1,12 +1,11 @@
 const express = require('express');
-const logger = require('./core/logger');
 
 const app = express();
 
-logger.info('-> Cargando middlewares globales antes de las rutas');
+console.log('-> Cargando middlewares globales antes de las rutas'); // eslint-disable-line
 
 
-logger.info('-> Cargando rutas');
+console.log('-> Cargando rutas'); // eslint-disable-line
 app.use(require('./core/middlewares/request'));
 
 
@@ -17,7 +16,7 @@ app.use('/estado', (req, res) => {
 });
 
 
-logger.info('-> Cargando middlewares globales despues de las rutas');
+console.log('-> Cargando middlewares globales despues de las rutas'); // eslint-disable-line
 // WIP middlewares despues de rutas globales
 
 module.exports = app;

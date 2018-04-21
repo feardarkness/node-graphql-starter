@@ -21,7 +21,7 @@ mongoose.connection.on('disconnected', () => {
 });
 
 mongoose.connection.on('error', (err) => {
-  console.error(err);
+  console.error(err); // eslint-disable-line
   console.log('-> Desconectado de la Base de Datos'); // eslint-disable-line
 });
 

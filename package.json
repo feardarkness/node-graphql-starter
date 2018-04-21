@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js  > ./node-graphql.log",
     "dev": "nodemon index.js",
-    "test": "LOG_LEVEL=silent nyc --reporter=html --reporter=text tape tests/**/*.js | tap-spec"
+    "test": "LOG_LEVEL=silent nyc --reporter=html --reporter=text tape tests/**/*.js | tap-spec",
+    "eslint": "eslint src/**/*.js"
   },
   "nyc": {
     "exclude": [
