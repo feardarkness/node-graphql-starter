@@ -1,6 +1,5 @@
 const express = require('express');
 const logger = require('./core/logger');
-const { Noticia } = require('./models');
 
 const app = express();
 

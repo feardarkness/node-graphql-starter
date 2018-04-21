@@ -4,7 +4,8 @@ const app = require('../../src/server');
 
 test('Verificando el servidor de Rest', (t) => {
   request(app)
-    .get('/')
+    .get('/estado')
+    .set('authorization', 'Bearer azx.ser.dfg')
     .expect(200)
     .expect('Content-Type', 'application/json; charset=utf-8')
     .end((err, res) => {
