@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 const { dbConfig } = require('../configs');
 
+if (dbConfig.debug) {
+  mongoose.set('debug', true);
+}
+
 let connectionUrl;
 if (dbConfig.auth && dbConfig.auth.user && dbConfig.auth.user !== '') {
   connectionUrl = `mongodb://${dbConfig.user}:${dbConfig.pass}@${dbConfig.ip}:${dbConfig.puerto}/${dbConfig.nombre}`;
