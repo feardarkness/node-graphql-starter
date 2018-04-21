@@ -1,0 +1,7 @@
+-> Cargando configuraciones
+-> Cargando middlewares globales antes de las rutas
+-> Cargando rutas
+-> Cargando middlewares globales despues de las rutas
+-> Conectado a la Base de Datos
+-> Desconectado de la Base de Datos
+-> Desconectando de la base de datos

@@ -1,16 +1,10 @@
 const test = require('tape');
-const request = require('supertest');
-const app = require('../../src/server');
+const logger = require('../../src/core/middlewares/logger');
 
 test('Verificando el servidor de Rest', (t) => {
-  request(app)
-    .get('/')
-    .expect(200)
-    .expect('Content-Type', 'application/json; charset=utf-8')
-    .end((err, res) => {
-      if (err) t.fail(err.message);
-      t.equal(res.body.estado, 'ok', 'El servidor responde correctamente');
-    });
-
+  t.equal(typeof logger.info, 'function', 'El logger debe tener el tipo info');
+  t.equal(typeof logger.debug, 'function', 'El logger debe tener el tipo debug');
+  t.equal(typeof logger.error, 'function', 'El logger debe tener el tipo error');
+  t.equal(typeof logger.fatal, 'function', 'El logger debe tener el tipo fatal');
   t.end();
 });

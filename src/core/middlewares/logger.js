@@ -1,4 +1,4 @@
-const pino = require('express-pino-logger');
+const pino = require('pino');
 const noir = require('pino-noir');
 const crypto = require('crypto');
 
