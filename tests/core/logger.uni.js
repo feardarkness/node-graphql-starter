@@ -1,5 +1,5 @@
 const test = require('tape');
-const logger = require('../../src/core/middlewares/logger');
+const logger = require('../../src/core/logger');
 
 test('Verificando el servidor de Rest', (t) => {
   t.equal(typeof logger.info, 'function', 'El logger debe tener el tipo info');
