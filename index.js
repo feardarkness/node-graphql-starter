@@ -1,5 +1,5 @@
 const { appConfig } = require('./src/configs');
-const server = require('./src/server');
+const server = require('./src/core/server');
 const db = require('./src/core/db');
 
 (async () => {
