@@ -5,8 +5,8 @@ const bodyParser = require('body-parser');
 const app = express();
 
 console.log('-> Cargando middlewares globales antes de las rutas'); // eslint-disable-line
-app.use(require('./middlewares/request-logger'));
 app.use(bodyParser.json());
+app.use(require('./middlewares/request-logger'));
 
 
 console.log('-> Cargando graphql'); // eslint-disable-line
